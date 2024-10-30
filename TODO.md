@@ -1,0 +1,6 @@
+- [x] There is the ability to register and login (Req 1)
+- [ ] Create/view/update/delete blog posts which contain title/content/published_date (Req 2)
+- [ ] Readers can follow blog authors (Req 3)
+- [ ] Use reactive Vue components for dynamic updating (Req 5)
+- [ ] When a new blog post is published, queue new notifications to follows (Req 6)
+- [ ] Notifications should send via email (Req 6)
