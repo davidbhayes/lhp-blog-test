@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Post/Edit');
     }
 
     /**
@@ -30,7 +30,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
+            'published_at' => 'required|date',
+        ]);
+        $request->user()->posts()->create($validated);
+
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -49,7 +56,10 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        $post->load('user');
+        return Inertia::render('Post/Edit', [
+            'post'=> $post
+        ]);
     }
 
     /**
