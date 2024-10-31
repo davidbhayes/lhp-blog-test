@@ -23,7 +23,7 @@ npm install
 npm run dev
 ```
 
-Alternatively (and extra useful if you want to use the PHP development serve instead of Valet or similar) use the 
+Alternatively (and extra useful if you want to use the PHP development server instead of Valet or similar) use the command: 
 
 ```bash
 composer run dev
